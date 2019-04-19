@@ -55,4 +55,4 @@ pacstrap /mnt base base-devel
 
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL ordanax.ru/arch/arch_2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL git.io/script_2.sh)"
