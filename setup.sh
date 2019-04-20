@@ -3,9 +3,9 @@ loadkeys ru
 setfont cyr-sun16
 timedatectl set-ntp true
 read -p "Разметка диска 1)boot (ВВОД В МЕГАБАЙТАХ)" disk
-read -p "Разметка диска 1)root (ВВОД В МЕГАБАЙТАХ)" disk1
-read -p "Разметка диска 1)swap (ВВОД В МЕГАБАЙТАХ)" disk2
-read -p "Разметка диска 1)home (ВВОД В МЕГАБАЙТАХ)" disk3
+read -p "Разметка диска 2)root (ВВОД В МЕГАБАЙТАХ)" disk1
+read -p "Разметка диска 3)swap (ВВОД В МЕГАБАЙТАХ)" disk2
+read -p "Разметка диска 4)home (ВВОД В МЕГАБАЙТАХ)" disk3
 (
   echo o;
 
