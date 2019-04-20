@@ -1,1 +1,1 @@
-# git.io/script1.sh
+# git.io/setup1.sh
