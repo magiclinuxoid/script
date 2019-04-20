@@ -63,10 +63,10 @@ pacman -S $gui_install --noconfirm
 echo "Какую оболочку установить ?"
 read -p "1 -Kde, 0 - gnome: " de_setting
 if [[ $de_setting == 0 ]]; then
-  pacman -S "gnome gnome-extra gdm networkmanager network-manager-applet ppp "
+  pacman -S gnome gnome-extra gdm networkmanager network-manager-applet ppp 
   systemctl enable gdm NetworkManager
 elif [[ $de_setting == 1 ]]; then
-  pacman -S "plasma kde-applications sddm networkmanager network-manager-applet ppp" 
+  pacman -S plasma kde-applications sddm networkmanager network-manager-applet ppp
   systemctl enable sddm NetworkManager
 fi
 
