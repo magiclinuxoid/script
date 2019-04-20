@@ -55,4 +55,4 @@ pacstrap /mnt base base-devel
 
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL git.io/setup2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL https://raw.githubusercontent.com/magiclinuxoid/script/master/setup2.sh)"
