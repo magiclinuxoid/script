@@ -66,7 +66,7 @@ if [[ $de_setting == 0 ]]; then
   pacman -S gnome gnome-extra gdm networkmanager network-manager-applet ppp 
   systemctl enable gdm NetworkManager
 elif [[ $de_setting == 1 ]]; then
-  pacman -S plasma kde-applications sddm networkmanager network-manager-applet ppp
+  pacman -S plasma-desktop sddm networkmanager network-manager-applet ppp
   systemctl enable sddm NetworkManager
 fi
 
