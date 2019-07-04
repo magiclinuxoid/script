@@ -28,7 +28,7 @@ read -p "Разметка диска 4)home (ВВОД В МЕГАБАЙТАХ)" 
   echo +$disk2;
 
   echo n;
-  echo;
+  echo p;
   echo;
   echo;
   echo +$disk3;
