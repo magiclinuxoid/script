@@ -30,7 +30,6 @@ read -p "Разметка диска 4)home (ВВОД В МЕГАБАЙТАХ)" 
   echo n;
   echo p;
   echo;
-  echo;
   echo +$disk3;
 
 
