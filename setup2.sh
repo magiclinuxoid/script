@@ -1,10 +1,12 @@
 ﻿#!/bin/bash
-echo 'Прписываем имя компьютера'
-read -p "Введите host имя" hostmane
+read -p "Введите имя компьютера: " hostname
+read -p "Введите имя пользователя: " username
+
+echo 'Прописываем имя компьютера'
 echo $hostname > /etc/hostname
 ln -svf /usr/share/zoneinfo/Asia/Yekaterinburg /etc/localtime
 
-echo 'Добавляем русскую локаль системы'
+echo '3.4 Добавляем русскую локаль системы'
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen 
 
@@ -19,8 +21,8 @@ echo 'KEYMAP=ru' >> /etc/vconsole.conf
 echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 
 echo 'Создадим загрузочный RAM диск'
-pacman -S mkinitcpio 
 mkinitcpio -p linux
+
 
 echo 'Создаем root пароль'
 passwd
