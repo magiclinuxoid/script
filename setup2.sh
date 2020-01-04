@@ -19,6 +19,7 @@ echo 'KEYMAP=ru' >> /etc/vconsole.conf
 echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 
 echo 'Создадим загрузочный RAM диск'
+pacman -S mkinitcpio --noconfirm 
 mkinitcpio -p linux
 
 echo 'Создаем root пароль'
