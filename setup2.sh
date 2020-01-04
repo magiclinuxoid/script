@@ -25,7 +25,7 @@ echo 'Создаем root пароль'
 passwd
 
 echo '3.5 Устанавливаем загрузчик'
-pacman -Syy
+pacman -Syu
 pacman -S grub --noconfirm 
 grub-install /dev/sda
 
