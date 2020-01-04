@@ -23,10 +23,6 @@ echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 echo 'Создадим загрузочный RAM диск'
 mkinitcpio -p linux
 
-
-echo 'Создаем root пароль'
-passwd
-
 echo '3.5 Устанавливаем загрузчик'
 pacman -Syu
 pacman -S grub --noconfirm 
@@ -39,8 +35,17 @@ echo 'Ставим программу для Wi-fi'
 pacman -S dialog wpa_supplicant --noconfirm 
 
 echo 'Добавляем пользователя'
-read -p "Имя пользователя " name
-useradd -m -g users -G wheel -s /bin/bash $name
+useradd -m -g users -G wheel -s /bin/bash $username
+
+echo 'Создаем root пароль'
+passwd
+
+echo 'Устанавливаем пароль пользователя'
+passwd $username
+
+echo 'Устанавливаем SUDO'
+echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
+
 
 echo 'Устанавливаем пароль пользователя $name'
 passwd $name
